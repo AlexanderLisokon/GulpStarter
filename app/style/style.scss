@@ -1,0 +1,61 @@
+
+//////////////////////////////////////////////////////////////////
+@import "normalize";
+/*========================================================
+Global Styles
+========================================================*/
+@import "colors";
+@import "fonts";
+@import "breakpoints";
+@import "heading";
+@import "button";
+@import "toggle";
+//////////////////////////////////////////////////////////////////
+//Sliders owlcarousel
+@import "owlcarousel/owl.carousel.min";
+//////////////////////////////////////////////////////////////////
+*, *:before, *:after {  
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body {
+    overflow-x: hidden; 
+    position: relative;
+    font-family: $global-font-family;    
+    
+    //base font-size
+    font-size: 14px;     
+    a{        
+        text-decoration: none;
+    }    
+    width: 100vw;
+}
+$padding-lr-large: 115px;
+$padding-lr-medium: 50px;
+$padding-lr-small: 20px;
+.wrapper{
+    margin: 0 auto;
+    max-width: 1600px;
+    height: 100%;
+    padding: 0 $padding-lr-small 0 $padding-lr-small;
+    @include breakpoint(medium) {
+        padding: 0 $padding-lr-medium 0 $padding-lr-medium;
+    }
+    @include breakpoint(large) {
+        padding: 0 $padding-lr-large 0 $padding-lr-large;
+    }    
+    background-color: $white;    
+    &-black-two{        
+        @extend .wrapper;
+        background-color: $black-two; 
+    }
+    &-white-two{        
+        @extend .wrapper;
+    	background-color: $white-two; 
+    } 
+    &-padding-off{
+        @extend .wrapper;
+        padding: 0 0 0 0; 
+    }
+}

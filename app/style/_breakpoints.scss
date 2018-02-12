@@ -1,0 +1,24 @@
+/*=========================================================
+///////////////////////////////////////////////////////////
+  BREAKPOINTS
+///////////////////////////////////////////////////////////
+=========================================================*/
+$xsmall: 320px;   
+$small: 750px;
+$large: 1600px;
+
+
+@mixin breakpoint($range) {
+/*======================+MOBILE-FIRST+==========================================*/
+  @if $range == xsmall {@media (max-width: ($xsmall - 1)) { @content; }}
+  @else if $range == small {@media (min-width: $xsmall) { @content; }}
+  @else if $range == large {@media (min-width: $medium) { @content; }}
+/*=======================+ONLY+==================================================*/
+  @else if $range == xsmall-only {@media screen and (max-width: ($xsmall - 1)) { @content; }}
+  @else if $range == small-only {@media screen and (min-width: $xsmall) and (max-width: ($small - 1)) { @content; }}
+  @else if $range == medium-only {@media screen and (min-width: $small) and (max-width: ($large - 1)) { @content; }}
+}
+
+
+
+

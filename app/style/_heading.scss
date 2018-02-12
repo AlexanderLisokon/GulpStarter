@@ -1,0 +1,47 @@
+
+
+$heading-font-family: $global-font-family;
+$heading-text-color: $dark-slate-blue;
+$heading-weight: $global-weight-bold;
+
+
+$p-size: 1.0rem;
+$map-heading-size: ( 	
+			h1: 4.643rem,  
+			h2: 3.214rem,  
+			h3: 2rem,  
+			h4: 1.143rem,  
+			h5: 1.0rem,  
+			h6: 0.929rem   
+		);
+$scale-for-small: 0.6;
+$scale-for-medium: 0.8;
+
+@for $i from 1 through 6 {
+  h#{$i} {  	
+  	font-family: $heading-font-family;
+    font-weight: $heading-weight;    
+    color: $heading-text-color;
+    margin: 0 0;
+    font-size: calc(#{map-get($map-heading-size, h#{$i})} * #{$scale-for-small});
+    @include breakpoint(medium) {
+    	font-size: calc(#{map-get($map-heading-size, h#{$i})} * #{$scale-for-medium});
+    }
+    @include breakpoint(large) {
+    	font-size: map-get($map-heading-size, h#{$i});
+    }    
+  }
+}
+
+p{  
+    font-size: calc(#{$p-size} * #{$scale-for-small});
+    @include breakpoint(medium) {
+        font-size: calc(#{$p-size} * #{$scale-for-medium});
+    }
+    @include breakpoint(large) {
+        font-size: $p-size;
+    }
+    font-weight: $global-weight-regular; 
+    margin: 0 0;
+}
+

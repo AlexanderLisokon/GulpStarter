@@ -1,0 +1,50 @@
+/*=========================================================
+///////////////////////////////////////////////////////////
+  FONTS
+///////////////////////////////////////////////////////////
+=========================================================*/
+@font-face {
+  font-family: 'Acrom';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Acrom'), local('Acrom-Light'),
+       url('../fonts/Acrom-Light.woff') format('woff'); 
+}
+@font-face {
+  font-family: 'Acrom';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Acrom'), local('Acrom-ExtraBold'),
+        url('../fonts/Acrom-ExtraBold.woff') format('woff'); 
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto'), local('Roboto-Light'),
+        url('../fonts/Roboto-Light.woff') format('woff'); 
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto'), local('Roboto-Bold'),
+        url('../fonts/Roboto-Bold.woff') format('woff'); 
+}
+
+$global-font-family: 'Acrom';
+$global-weight-light: 300;  
+$global-weight-bold: 700;   
+
+
+.light{
+	font-weight: $global-weight-light;
+}
+.bold{
+	font-weight: $global-weight-bold; 
+}
+
+
+
+

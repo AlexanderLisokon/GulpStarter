@@ -1,0 +1,30 @@
+/*=========================================================
+///////////////////////////////////////////////////////////
+  COLORS
+///////////////////////////////////////////////////////////
+=========================================================*/
+$colors: 
+(black: 				#000000,
+header:       	  #414042,
+input-text:       #989b9c,
+hover:            #0f5b58,
+btn:              #439c92,
+green-sqare: 			#8dc63f,
+nav-item:         #edf0e8,
+contact:	        #f3fafa,
+white: 					#ffffff
+);
+
+
+
+@each $property, $value in $colors {
+  .color-#{$property} {
+    color: $value;
+  }
+  .bg-color-#{$property} {
+		background-color: $value;
+	}
+	.border-color-#{$property} {
+		border-color: $value;
+	}
+}

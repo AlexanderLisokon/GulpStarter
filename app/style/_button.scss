@@ -1,0 +1,31 @@
+$button: button;
+
+
+.#{$button} {	
+	width: 145px;
+	height: 45px;
+	font-size: 1.4rem;	
+	cursor: pointer;		
+}
+
+.#{$button}-shamrock-green {
+	background-color: $shamrock-green;
+	border-color: $shamrock-green;
+	&:hover{
+		background-color: lighten($shamrock-green,10%);
+		border-color: darken($shamrock-green,10%);
+		transition: all 1s;
+	}
+}
+
+.#{$button}-round {
+	border-radius: 22.5px;
+	border-width: 5px;
+	border-style: solid;
+	outline: none;
+}
+.#{$button}-large {
+	width: 197px;
+	height: 54px;
+	font-size: 1.4rem;
+}
